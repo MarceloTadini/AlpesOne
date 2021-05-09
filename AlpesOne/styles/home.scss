@@ -1,0 +1,386 @@
+:root {
+  font-family: "Poppins", sans-serif;
+  --color-header: #707070;
+  --color-icons: #d3d3d3;
+  --color-especial__red: #DF0209;
+}
+
+@mixin contact-text {
+  text-transform: uppercase;
+  font-style: italic;
+  color: #727B7A;
+}  
+
+@mixin contact-number {
+  color: var(--color-especial__red);
+  font-size: 1.625rem;
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+@mixin title {
+  font-size: 2.125rem;
+  font-style: italic;
+}
+
+.material-icons {
+  color: var(--color-icons);
+}
+
+.navegation {
+  background-color: #EEEEEE;
+  height: 1.563rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  a{
+    color: var(--color-header);
+    text-decoration: none;
+    font-size: 0.75rem;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+
+    &:hover{
+      opacity: 0.6;
+    }
+  }
+
+  .material-icons {
+    margin-right: 0.614rem;
+  }
+  
+
+  div{
+    display: flex;
+    justify-content: space-between;
+    width: 23rem;
+  }
+}
+
+.img-desktop {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.img-mobile{
+  display: none;
+}
+
+.banner{
+  .banner-infos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85vw;
+    margin: 1.75rem auto 0 auto;
+  
+    .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      p{
+        @include contact-text();
+      }
+  
+      span {
+        @include contact-number();
+      }
+    }
+
+  }
+}
+
+form {
+  width: 16.875rem;
+  height: 22rem;
+  position: fixed;
+  top: 12.125rem;
+  left: 68.188rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #EEEEEE;
+  border-radius: 4px;
+
+  .material-icons {
+    font-size: 2.438rem;
+    margin-right: 0.688rem;
+  }
+
+  
+  .form-contact {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.188rem;
+    padding-top: 1.188rem;
+
+    p {
+      font-size: 0.875rem;
+  
+      span {
+        color: var(--color-especial__red);
+        font-size: 1.375rem;
+        font-weight: bold;
+      }
+    }
+  
+  }
+
+  
+  .input-with-icon input, select {
+    padding-left: 40px;
+  }
+  
+  .input-with-icon {
+    position: relative;
+  }
+  
+  .input-with-icon i {
+    position: absolute;
+    left: 0;
+    top: 0.15rem;
+    padding: 9px 8px;
+    color: #aaa;
+    transition: 0.3s;
+  }
+
+  input, select {
+    width: 14.375rem;
+    height: 2.25rem;
+    border: 1px solid #D5D5D5;
+    border-radius: 4px;
+    margin-bottom: 0.313rem;
+    color: #00000061;
+    background-color: #EEEEEE;
+  }
+
+  button {
+    width: 14.375rem;
+    height: 2.813rem;
+
+    background-color: #1CB72A;
+
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+
+    border: none;
+    border-radius: 4px;
+
+
+  }
+
+}
+
+.emoction {
+  margin-left: 7.063rem;
+  margin-top: 1.938rem;
+
+  h3 {
+    @include title();
+  }
+
+  
+  .car-photos {
+    display: flex;
+    align-items: center;
+    margin-top: 1.938rem;
+
+  
+    .car-photos__parts {
+      display: flex;
+      flex-direction: column;
+      margin-right: 2.688rem;
+
+      img {
+        margin-bottom: 0.688rem;
+        border: 1px solid #d5d5d5;
+      }
+    }
+  }
+
+  .text-description {
+    width: 54.375rem;
+    font-size: 1.125rem;
+    margin: 2.438rem 0 3.313rem 0;
+  }
+}
+
+.are-ready {
+  margin-bottom: 3.75rem;
+
+  
+  img {
+    width: 100%;
+  }
+
+  .are-ready__infos {
+    margin-left: 6.563rem;
+    margin-top: 3.75em;
+
+    h3{
+      @include title();
+    }
+
+    .text-description__ready {
+      margin-top: 0.625rem;
+    }
+
+    .card.cars {
+      margin-top: 1.813rem;
+      margin-left: 1.875rem;
+      display: inline-block;
+
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 0.875rem;
+        font-weight: 300;
+
+        .card-text {
+          text-align: center;
+        }
+        
+        .btn.btn-primary {
+          background-color: #ffffff;
+          color: #000000;
+
+          font-size: 0.875rem;
+          font-family: 'Roboto', sans-serif;
+
+          margin-top: 1.25rem;
+          border: 1px solid #D5D5D5;
+          border-radius: 4px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+footer {
+  width: 100%;
+  height: 14.25rem;
+  background-color: #EEEEEE;
+
+  .footer-infos {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .footer-location-contact {
+      display: flex;
+      align-items: center;
+      margin-top: 1.188rem;
+  
+      a {
+        text-decoration: none;
+        margin-right: 1.875rem;
+      }
+  
+       
+      .footer-location {
+        display: flex;
+        align-items: center;
+        width: 16.875rem;
+        height: 5rem;
+        background-color: #ffffff;
+        border: 1px solid var(--color-especial__red);
+        border-radius: 5px;
+  
+        span {
+          font-size: 2.688rem;
+        }
+  
+        div {
+          margin-left: 1rem;
+  
+          p {
+            font-size: 0.875rem;
+            color: black;
+          }
+  
+          span {
+            color: var(--color-especial__red);
+            font-size: 1.375rem;
+            font-weight: bold;
+          }
+        }
+      } 
+  
+      .footer-contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      
+        width: 16.875rem;
+        height: 5rem;
+        background-color: #ffffff;
+        border: 1px solid var(--color-especial__red);
+        border-radius: 5px;  
+      
+        p{
+          @include contact-text();
+        }
+      
+        span{
+          @include contact-number();
+        }
+      }
+      
+    }
+
+    .follow-us {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      margin-bottom: 1.25rem;
+    }
+    
+    .social-media {
+      display: flex;
+      gap: 1.25rem;
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #c5c5c5;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  
+}
+
+.end-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.875rem;
+  padding-bottom: 2rem;
+
+  p {
+    font-size: 0.75rem;
+    color: #707070;
+    margin-left: 8.563rem;
+    margin-right: 1.25rem;
+  }
+}

@@ -1,0 +1,148 @@
+@media screen and (max-width: 480px) {
+
+    @mixin title {
+        font-size: 1.5rem;
+      }
+
+    .navegation{
+        height: 2.5rem;
+        justify-content: none;
+    
+        a{
+            P{
+                display: none;
+            }
+        }
+    
+        div{
+            width: 10rem;
+        }
+    }
+    
+    .banner{
+        .banner-infos{
+            flex-direction: column;
+    
+            .contact{
+                margin-top: 1.813rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+    }
+
+    .img-desktop{
+        display: none;
+    }
+
+    .img-mobile{
+        display: block;
+    }
+
+    form {
+        position: unset;
+        margin-left: 3.2rem;
+    }
+
+    .emoction{
+        margin-left: 0;
+        text-align: center;
+
+        .text-description{
+            width: auto;
+        }
+
+        h3{
+            @include title();
+        }
+
+    }
+
+    .are-ready{
+
+        .are-ready__infos{
+
+            margin-left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+             
+            h3{
+                @include title();
+                text-align: center;
+            }
+
+            .text-description__ready{
+                text-align: center;
+            }
+
+            .card.cars{
+                margin-left: 0;
+            }
+
+            .collape-box{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+                width: 18.938rem;
+                margin-top: 1.5rem;
+
+                border: 1px solid #D5D5D5;
+
+                img{
+                    width: 75%;
+                }
+
+                .material-icons{
+                    color: black;
+                    font-size: 2rem;
+                    font-weight: bold;;
+                }
+            }
+        }
+    }
+
+    footer{
+        height: 21.188rem;
+
+        .footer-infos{
+
+            .footer-location-contact{
+                flex-direction: column;
+    
+                a{
+                    margin-right: 0;
+                    margin-bottom: 0.5rem;
+                }
+            }
+
+            .follow-us{
+                text-align: center;
+            }
+        }
+        
+    }
+
+    .end-page{
+        display: block;
+        text-align: center;
+
+        img:first-child{
+            display: block;
+            margin: 1rem auto;
+        }
+
+        p{
+            margin-left: 0;
+            display: inline-block;
+        }
+
+        img:nth-child(2){
+            display: inline-block;
+        }
+    }
+
+}
+
+
